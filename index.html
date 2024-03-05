@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <title>Fixed Top Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+           header {
+            top: 2px;
+            left: center;
+            background-color: #343a05;
+            color: #ffffff;
+            padding: 1px;
+            text-align: center;
+            width: 100%;
+            max-width: 800px;
+           position: fixed;
+           border-radius: 10px; /* Add rounded corners */
+        }
+
+        
+        .colored-box {
+            background-color: #f1f1f1;
+    color: #ffffff;
+    padding: 270px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-image: url("Photolab-36016308.jpeg"); /* Replace with your image path */
+}
+   
+     
+
+        select {
+            padding: 5px;
+            font-size: 16px;
+            margin-left: 20px; /* Adjust the margin as needed */
+            background-color: #FFA500; /* Orange color for the select background */
+            color: white; /* Text color for the options */
+            border: none; /* Remove default border */
+        }
+
+    </style>
+
+<header>
+    <h1>
+        Menu Card
+          <select id="page-dropdown" onchange="openSelectedPage()">
+                <option value="" selected disabled>Choose Menu</option>
+                <option value="1_starter.html">Starter</option>
+                <option value="2_softdringk.html">Soft Drink</option>
+                <option value="3_veg_menu.html">Veg</option>
+                <option value="4_nonveg.html">Non Veg</option>
+                <option value="5_rotis.html">Rotis</option>
+            </select>
+        </h1>
+    </h1>
+    
+</header>
+</head>    
+
+<body>
+    <div class="colored-box">
+    <H2 style="color: rgb(0, 0, 0);">WELCOME TO HOTEL</H2> 
+    <H1 style="color: rgb(2, 2, 2);">ANAND BHUVAN</H1> 
+   </body>
+</html>
+
+</Div>
+
+<script>
+    function openSelectedPage() {
+        var dropdown = document.getElementById("page-dropdown");
+        var selectedValue = dropdown.options[dropdown.selectedIndex].value;
+
+        if (selectedValue) {
+            window.location.href = selectedValue;
+        }
+    }
+</script>
+</body>
+</html>
