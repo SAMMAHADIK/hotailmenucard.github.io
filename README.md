@@ -1,1 +1,1 @@
-# hotailmenucard.github.io
+# hotelmenucard.github.io
