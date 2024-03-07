@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Top Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+
+        .menu-item {
+            flex: 0 1 calc(50% - 20px);
+            background-color: white;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+    
+        .menu-item img {
+            max-width: 22%;
+            height: auto;
+            border-radius: 8px;
+            margin-left: 10px; /* Add some margin for spacing */
+            float: right;
+                }
+        h2 {
+            color: #333;
+        }
+        p {
+            margin: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        #page-dropdown {
+            font-size: 16px;
+            padding: 10px;
+        }
+        label {
+            margin-left: 500px; /* Adjust the margin to create a distance of 200px */
+            font-size: 16px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+   
+<header>
+    <h1>Our Menu</h1>
+    <label for="page-dropdown"></label>
+    <select id="page-dropdown" onchange="scrollToSection()">
+        <option value="" selected disabled></option>
+        <option value="section1">1 Starter</option>
+        <option value="section2">2 Soft_Drink</option>
+        <option value="section3">3 Veg</option>
+        <option value="section4">4 Non_veg</option>
+        <option value="section5">6 Rotis</option>
+          </select>
+</header>
+/********************************************
+<section id="section1"> <h3>Starter</h3>
+    <div class="menu-item">
+        <h2>Veg Briyani</h2>
+        <p>Description of item 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Price: ₹200</p>
+        <p>Vegetarian: Yes</p>
+    </div>
+
+    <div class="menu-item">
+        <h2>Panir Veg Briyani</h2>
+        <p>Description of item 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Price: ₹220</p>
+        <p>Vegetarian: Yes</p>
+    </div>
+    </section>
+
+/********************************************
+
+
+<section id="section2"> <h3>Soft Drink</h3>
+
+    <div class="menu-item">
+        <h2>Wine</h2>
+        <p>Description of item 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Price: ₹200</p>
+        <p>Vegetarian: Yes</p>
+    </div>
+
+    <div class="menu-item">
+        <h2>Apple Juice</h2>
+        <p>Description of item 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Price: ₹220</p>
+        <p>Vegetarian: Yes</p>
+    </div>
+</section>
+
+/********************************************
+
+<section id="section3"> <h3>Veg</h3>
+      <div class="menu-item">
+        <h2>Veg Briyani</h2>
+        <p>Description of item 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Price: ₹200</p>
+        <p>Vegetarian: Yes</p>
+    </div>
+
+    <div class="menu-item">
+        <h2>Panir Veg Briyani</h2>
+        <p>Description of item 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Price: ₹220</p>
+        <p>Vegetarian: Yes</p>
+    </div>
+</section>
+
+/********************************************
+
+
+<section id="section4"><h3>Non Veg</h3>
+    <div class="menu-item">
+        <img src="ChickenBriyani.jpg" alt="Item 1 Image">
+        <h2>Chicken Briyani</h2>
+        <p>Description of item 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Price: ₹ 210 </p>
+        <p>Vegetarian: No </p>
+    </div>
+
+    <div class="menu-item">
+        <img src="Muttonbiryani.jpg" alt="Item 1 Image">
+        <h2>Muttan Biryani</h2>
+        <p>Description of item 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Price: ₹ 250</p>
+        <p>Vegetarian: No</p>
+    </div>
+
+    <div class="menu-item">
+        <img src="ChickenBriyani.jpg" alt="Item 1 Image">
+        <h2>Chicken Briyani Family Pack</h2>
+        <p>Description of item 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Price: ₹550<</p>
+        <p>Vegetarian: No</p>
+    </div>
+
+    <div class="menu-item">
+        <h2>Egg Biryani</h2>
+        <p>Description of item 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Price: ₹200<</p>
+        <p>Vegetarian: No</p>
+    </div>
+
+   
+</section>
+
+
+/********************************************
+
+<section id="section5"> <h3>Rotis</h3>
+    
+    <div class="menu-item">
+        <img src="ChickenBriyani.jpg" alt="Item 1 Image">
+        <h2>Tanduri Rotis</h2>
+        <p>Description of item 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Price: ₹ 210 </p>
+        <p>Vegetarian: No </p>
+    </div>
+
+    <div class="menu-item">
+        <img src="Muttonbiryani.jpg" alt="Item 1 Image">
+        <h2>Garlik Rotis</h2>
+        <p>Description of item 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Price: ₹ 250</p>
+        <p>Vegetarian: No</p>
+    </div>
+
+    <div class="menu-item">
+        <img src="ChickenBriyani.jpg" alt="Item 1 Image">
+        <h2>Chapati</h2>
+        <p>Description of item 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Price: ₹550<</p>
+        <p>Vegetarian: No</p>
+    </div>
+
+    <div class="menu-item">
+        <h2>Bhakari</h2>
+        <p>Description of item 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Price: ₹200<</p>
+        <p>Vegetarian: No</p>
+    </div>
+    
+</section>
+
+
+
+<script>
+    function scrollToSection() {
+        var selectedSectionId = document.getElementById("page-dropdown").value;
+        if (selectedSectionId) {
+            var selectedSection = document.getElementById(selectedSectionId);
+            if (selectedSection) {
+                selectedSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
